@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Dreams</title>
+
+    <!-- Materialize CSS and Icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+     <!-- Materialize JavaScript -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+     <!-- Auto-initialize Materialize elements)-->
+     <script> M.AutoInit();</script>
+
+     <link rel="stylesheet" href="/stylesheets/journalStyle.css">
+
+
+</head>
+
+<body class="deep-purple lighten-5">
+    <!-- NAV BAR -->
+    <nav>
+        <div class="nav-wrapper deep-purple lighten-3">
+            <a href="/" class="brand-logo center"><i class="material-icons left">cloud_circle</i>Your Dreams<i class="material-icons right">cloud_circle</i></a> <!-- cap icon appears next to nav bar-->
+            <a href="/" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right">
+                <li><a href="/"><i class="material-icons left">home</i> Home</a></li>
+                <li><a href="/views/journal"><i class="material-icons left">cloud</i> Journal</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- TABLE -->
+    <div class="container">
+        <h1>Your Dreams:</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Title</th>
+                    <th>Type</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>04/01/2023</td>
+                    <td>Driving Off Cliff</td>
+                    <td>Normal Dream</td>
+                    <td>
+                        <a class="deep-purple lighten-3 waves-effect waves-light btn-floating" href="/views/dreams"><i class="material-icons">info</i></a>
+                    </td>
+                    <td>
+                        <a class="deep-purple  lighten-1 waves-effect waves-light btn-floating"><i class="material-icons">delete</i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>04/02/2023</td>
+                    <td>Flying Over Ocean </td>
+                    <td>Lucid Dream</td>
+                    <td>
+                        <a class="deep-purple lighten-3 waves-effect waves-light btn-floating" href="/views/dreams"><i class="material-icons">info</i></a>
+                    </td>
+                    <td>
+                        <a class="deep-purple  lighten-1 waves-effect waves-light btn-floating"><i class="material-icons">delete</i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>04/03/2023</td>
+                    <td>Naked At School</td>
+                    <td>Nightmare</td>
+                    <td>
+                        <a class="deep-purple lighten-3 waves-effect waves-light btn-floating" href="/views/dreams"><i class="material-icons">info</i></a>
+                    </td>
+                    <td>
+                        <a class="deep-purple  lighten-1 waves-effect waves-light btn-floating"><i class="material-icons">delete</i></a>
+                    </td>
+                    </tr>
+            </tbody>
+        </table>
+
+        <!-- MODAL BUTTON -->
+        <div class="section" id="controls">
+            <a class="deep-purple accent-1
+            waves-effect waves-light btn-floating left modal-trigger" href="#add">
+                <i class="material-icons center">add</i>
+            </a>
+        </div>
+
+        <!-- EDIT MODAL -->
+        <div class="modal" id="add">
+            <div class="modal-content">
+                <h3>Add Dream:</h3>
+                <form id="addForm">
+                    <div class="row">
+                        <div class="input-field col s8">
+                            <textarea class="materialize-textarea" id="titleInput" name="title" data-length="200"></textarea>
+                            <label for="descriptionInput" style="color:rgb(140, 121, 176)">Title:</label>
+                        </div>
+
+                        <div class="input-field col s4">
+                            <input type="date" id="dateInput" name="date">
+                            <label for="dateInput" style="color:rgb(140, 121, 176)">Date:</label>
+                        </div>
+
+                        <div class="input-field col s6">
+                            <select type="number" id="typeInput" name="type">
+                                <option value="" disabled>Choose Your Dream Type</option>
+                                <option value=1>Normal Dream</option>
+                                <option value=2>Lucid Dream</option>
+                                <option value=3>Progressive Dream</option>
+                                <option value=4>False-Awakening Dream</option>
+                                <option value=5>Daydream</option>
+                                <option value=6>Vivid Dream</option>
+                                <option value=7>Recurring Dream</option>
+                                <option value=8>Prophetic Dream</option>
+                                <option value=9>Nightmare</option>
+                              </select>
+                              <label for="typeInput" style="color:rgb(140, 121, 176)">Type:</label>
+                        </div>
+
+                        <div class="input-field col s6">
+                            <textarea class="materialize-textarea" id="symbolInput" name="symbol" data-length="200"></textarea>
+                            <label for="descriptionInput" style="color:rgb(140, 121, 176)">Symbols:</label>
+                        </div>
+                        
+                        <div class="input-field col s12">
+                            <textarea class="materialize-textarea" id="descriptionInput" name="description" data-length="600"></textarea>
+                            <label for="descriptionInput" style="color:rgb(140, 121, 176)">Description:</label>
+                        </div>
+                        
+                        <div class="input-field col s12">
+                            <textarea class="materialize-textarea" id="interpretationInput" name="interpretation" data-length="300"></textarea>
+                            <label for="descriptionInput" style="color:rgb(140, 121, 176)">Interpretation:</label>
+                        </div>
+                    </div>
+                </form>
+                <!-- MODAL FOOTER -->
+                <div class="modal-footer">
+                    <!-- SUBMIT BUTTON FORM ATTRIBUTE -->
+                    <button class="light-green lighten-2 btn waves-effect waves-light" type="submit" form="updateForm">
+                        <i class="material-icons">check</i>
+                    </button>
+                    <button class="modal-close waves-effect waves-green btn-flat"><i class="material-icons">close</i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <!-- Materialize JavaScript -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+     <script src="/scripts/materializeAutoInit.js"></script>
+
+</body>
+</html>

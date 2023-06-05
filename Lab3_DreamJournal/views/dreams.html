@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driving Off Cliff</title>
+
+    <!-- Materialize CSS and Icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <link rel="stylesheet" href="/stylesheets/journalStyle.css">
+    
+</head>
+
+<body class="deep-purple lighten-5">
+    <nav>
+        <div class="nav-wrapper deep-purple lighten-3">
+            <a href="/" class="brand-logo center"><i class="material-icons left">cloud_circle</i>Your Dreams<i class="material-icons right">cloud_circle</i></a> <!-- cap icon appears next to nav bar-->
+            <a href="/" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right">
+                <li><a href="/"><i class="material-icons left">home</i> Home</a></li>
+                <li><a href="/journal"><i class="material-icons left">cloud</i> Journal</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- PAGE CONTENT! -->
+    <div class="container">
+        <div class="section flow-text" id="details">
+            <h1>Driving Off Cliff</h1>
+            <p style="color:rgb(163, 121, 215)">
+                You can include things like where you were, who you were with, the atmosphere and weather, how you felt, and how you feel after waking up.
+            </p>
+            <table>
+                <tr>
+                    <th>Date:</th>
+                    <td>Saturday, April 1, 2023</td>
+                </tr>
+                <tr>
+                    <th>Type:</th>
+                    <td>Normal Dream</td>
+                </tr>
+                <tr>
+                    <th>Symbols:</th>
+                    <td>Car, Road</td>
+                </tr>
+                <tr>
+                    <th>Description:</th>
+                    <td>It was pretty nice out. My friend was driving me, my sister, and my grandma on the highway. All of a sudden, she drove off the side of the cliff we were on. I immediately screamed, I was so scared of dying, but somehow we were coasting on top of the water below the cliff. I was absolutely terrified. I'm glad that it was just a dream.</td>
+                <tr>
+                    <th>Interpretation:</th>
+                    <td>I'm scared of my friend's driving skills and riding with her.</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- MODAL BUTTON-->
+        <div class="section" id="controls">
+            <a class="deep-purple lighten-2 waves-effect waves-light btn-large left modal-trigger" href="#edit">
+                <i class="material-icons center">edit</i>
+            </a>
+            <a class="deep-purple lighten-2 waves-effect waves-light btn-large right">
+                <i class="material-icons center">delete</i>
+            </a>
+        </div>
+
+        <!-- EDIT MODAL -->
+        <div class="modal" id="edit">
+            <div class="modal-content">
+                <h3>Edit Dream:</h3>
+                <form id="updateForm">
+                    <div class="row">
+                        <div class="input-field col s8">
+                            <textarea class="materialize-textarea" id="titleInput" name="title" data-length="200">Driving Off Cliff</textarea>
+                            <label for="descriptionInput" style="color:rgb(140, 121, 176)">Title:</label>
+                        </div>
+
+                        <div class="input-field col s4">
+                            <input type="date" id="dateInput" name="date" value="2023-04-01">
+                            <label for="dateInput" style="color:rgb(140, 121, 176)">Date:</label>
+                        </div>
+
+                        <div class="input-field col s6">
+                            <select type="number" id="typeInput" name="type">
+                                <option value="" disabled>Choose Your Dream Type</option>
+                                <option value=1 selected>Normal Dream</option>
+                                <option value=2>Lucid Dream</option>
+                                <option value=3>Progressive Dream</option>
+                                <option value=4>False-Awakening Dream</option>
+                                <option value=5>Daydream</option>
+                                <option value=6>Vivid Dream</option>
+                                <option value=7>Recurring Dream</option>
+                                <option value=8>Prophetic Dream</option>
+                                <option value=9>Nightmare</option>
+                              </select>
+                              <label for="typeInput" style="color:rgb(140, 121, 176)">Type:</label>
+                        </div>
+
+                        <div class="input-field col s6">
+                            <textarea class="materialize-textarea" id="symbolInput" name="symbol" data-length="200">Car, Road</textarea>
+                            <label for="descriptionInput" style="color:rgb(140, 121, 176)">Symbols:</label>
+                        </div>
+                        
+                        <div class="input-field col s12">
+                            <textarea class="materialize-textarea" id="descriptionInput" name="description" data-length="600">It was pretty nice out. My friend was driving me, my sister, and my grandma on the highway. All of a sudden, she drove off the side of the cliff we were on. I immediately screamed, I was so scared of dying, but somehow we were coasting on top of the water below the cliff. I was absolutely terrified. I'm glad that it was just a dream.</textarea>
+                            <label for="descriptionInput" style="color:rgb(140, 121, 176)">Description:</label>
+                        </div>
+                        
+                        <div class="input-field col s12">
+                            <textarea class="materialize-textarea" id="interpretationInput" name="interpretation" data-length="300">I'm scared of my friend's driving skills and riding with her.</textarea>
+                            <label for="descriptionInput" style="color:rgb(140, 121, 176)">Interpretation:</label>
+                        </div>
+    
+                    </div>
+                </form>
+                <!-- MODAL FOOTER -->
+                <div class="modal-footer">
+                    <!-- SUBMIT BUTTON FORM ATTRIBUTE -->
+                    <button class="light-green lighten-2 btn waves-effect waves-light" type="submit" form="updateForm">
+                        <i class="material-icons">check</i>
+                    </button>
+                    <button class="modal-close waves-effect waves-green btn-flat"><i class="material-icons">close</i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Materialize JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script src="/scripts/materializeAutoInit.js"></script>
+
+</body>
+
+</html>
